@@ -34,6 +34,32 @@
 
 <br/>
 
+<h1>Table of Contents</h1>
+
+   * [Retrieval of Hidden Data](#retrieval-of-hidden-data)
+      * [Lab: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data](#lab-sql-injection-vulnerability-in-where-clause-allowing-retrieval-of-hidden-data)
+      * [Example 2:](#example-2)
+   * [Lab: SQL injection vulnerability allowing login bypass](#lab-sql-injection-vulnerability-allowing-login-bypass)
+   * [Union Attacks](#union-attacks)
+      * [Lab: Determining the number of columns required returned by the query](#lab-determining-the-number-of-columns-required-returned-by-the-query)
+      * [Lab: Finding a column containing text](#lab-finding-a-column-containing-text)
+      * [Lab: Retrieving data from other tables](#lab-retrieving-data-from-other-tables)
+      * [Lab: Retrieving multiple values within a single column](#lab-retrieving-multiple-values-within-a-single-column)
+   * [Examining the Database](#examining-the-database)
+      * [Lab: Querying database type and version (Oracle Database)](#lab-querying-database-type-and-version-oracle-database)
+      * [Lab: Querying database type and version (MySQL and MSSQL)](#lab-querying-database-type-and-version-mysql-and-mssql)
+      * [Lab: Listing Contents of the Database](#lab-listing-contents-of-the-database)
+      * [Lab: Listing Information from Database (Not Oracle):](#lab-listing-information-from-database-not-oracle)
+      * [Listing Information from Database (Not Oracle) Lab:](#listing-information-from-database-not-oracle-lab)
+   * [Blind SQL Injection](#blind-sql-injection)
+      * [Lab: Blind SQL injection with conditional responses](#lab-blind-sql-injection-with-conditional-responses)
+      * [Lab: Blind SQL with conditional errors](#lab-blind-sql-with-conditional-errors)
+      * [Lab: Blind SQL with time delays](#lab-blind-sql-with-time-delays)
+      * [Lab: Blind SQL injection with time delays and information retrieval](#lab-blind-sql-injection-with-time-delays-and-information-retrieval)
+      * [Lab: SQL injection with filter bypass via XML encoding](#lab-sql-injection-with-filter-bypass-via-xml-encoding)
+    
+<br/>
+
 ## Retrieval of Hidden Data
 
 ### Lab: SQL injection vulnerability in WHERE clause allowing retrieval of hidden data
