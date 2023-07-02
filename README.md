@@ -1,4 +1,4 @@
-<br/>
+# PortSwigger Academy SQL Injection Labs Writeup
 
 - SQLi (SQL Injection) is a web security vulnerability allowing an attacker to interfere with the queries that an application makes to its database.
 
@@ -40,7 +40,7 @@
 
 <br/>
 
-![Untitled](3ca2fe4c_Untitled.png)
+![3ca2fe4c_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/494de5f1-5e15-4174-bd3a-a567185f0712)
 
 - **Shopping application that displays products in different categories**
 
@@ -48,13 +48,13 @@
 
 <br/>
 
-![Untitled](cb8ac599_Untitled.png)
+![cb8ac599_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/0c4ab8bd-afe5-4b88-9364-4634c0612def)
 
 - Filtering for accessories only
 
 <br/>
 
-![Untitled](63bf6400_Untitled.png)
+![63bf6400_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/409a2a8f-e0d4-4236-b6a6-ad0875829db8)
 
 - Using the URL bar to inject the query
 
@@ -95,7 +95,7 @@ SELECT * FROM products WHERE category = 'Accessories'--' AND released = 1
 
 <br/>
 
-![Untitled](2a79c5c2_Untitled.png)
+![2a79c5c2_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/3cda2c6e-9282-4f1c-8d29-8da01ca82f5e)
 
 - Successful attempt at retrieving hidden data
 
@@ -129,7 +129,7 @@ The query above will essentially check if the category is ‘Accessories’ or `
 
 <br/>
 
-![Untitled](341230e5_Untitled.png)
+![341230e5_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/47485ba4-5676-48dd-b5e3-e03af9a3677a)
 
 - Successful injection attempt at retrieving data from all categories
 
@@ -139,7 +139,7 @@ The query above will essentially check if the category is ‘Accessories’ or `
 
 <br/>
 
-For instance a log in page with a username and password that uses an SQL query to check the credentials by performing an SQL query to authenticate the user.
+For instance, a login page with a username and password uses an SQL query to check the credentials by performing an SQL query to authenticate the user.
 
 
 ```sql
@@ -167,9 +167,9 @@ As a result, the query returns the username **administrator** and logs the attac
 
 <br/>
 
-![Untitled](040b5b02_Untitled.png)
+![040b5b02_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/5d445465-8010-470f-87f2-ed5ac5bbb043)
 
-![Untitled](1d312a4c_Untitled.png)
+![1d312a4c_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/bafe3fad-b039-44f7-b9f5-704609d23ee4)
 
 - **Successfully logged in as Administrator**
 
@@ -177,7 +177,7 @@ As a result, the query returns the username **administrator** and logs the attac
 
 ## Union Attacks
 
-Union attacks allows the attacker to retrieve data from other tables within the database using the **UNION** keyword which allows the attacker to run another **SELECT **query by appending it to the end of the original query.
+Union attacks allow the attacker to retrieve data from other tables within the database using the **UNION** keyword which allows the attacker to run another **SELECT **query by appending it to the end of the original query.
 
 <br/>
 
@@ -253,7 +253,7 @@ Basically, the query will now display all products from the **Accessories** cate
 
 <br/>
 
-![Untitled](1c49ce20_Untitled.png)
+![1c49ce20_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/234158a8-2f0c-4f6e-afcc-c596173555a6)
 
 - Determining the number of columns using Burp Suite
 
@@ -283,7 +283,7 @@ Basically, the query will now display all products from the **Accessories** cate
 
 <br/>
 
-![Untitled](b60f2fd2_Untitled.png)
+![b60f2fd2_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/9a2b8a48-0274-4928-904b-ba75c29a3d33)
 
 - Determining the column which uses the string data type
 
@@ -306,7 +306,7 @@ As a result, the data can be extracted from other tables such as the `**username
 
 <br/>
 
-![Untitled](fbbcb5d6_Untitled.png)
+![fbbcb5d6_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/415e6241-9a14-4ad5-b9ae-f68203762ea0)
 
 - Results in **Burp Suite**
 
@@ -314,7 +314,7 @@ As a result, the data can be extracted from other tables such as the `**username
 
 <br/>
 
-![Untitled](d6445f3f_Untitled.png)
+![d6445f3f_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/fd6e7315-7a8a-46a9-b023-d4233f396d8a)
 
 - **Results in the web application**
 
@@ -346,7 +346,7 @@ As a result, the data can be extracted from other tables such as the `**username
 
 <br/>
 
-![Untitled](2bf61f8f_Untitled.png)
+![2bf61f8f_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/eae3f982-9f88-4f48-bc52-7cf5289d1ba9)
 
 <br/>
 
@@ -356,19 +356,19 @@ As a result, the data can be extracted from other tables such as the `**username
 
 - Queries for some popular database types
 
-![Untitled](e0d789ca_Untitled.png)
+![e0d789ca_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/8125af47-8b2c-4b62-a4ec-8d2a87253e47)
 
 - `version` represents global variable which consists of the version information of the host
 
 <br/>
 
-![Untitled](eb27bdbe_Untitled.png)
+![eb27bdbe_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/bb6bd867-2dc6-4001-b67c-b57265ba4f6a)
 
 - Results in **Burp Suite:**
 
 <br/>
 
-![Untitled](71a04693_Untitled.png)
+![71a04693_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/749120b3-06c6-4764-98b8-45a65a8fc71e)
 
 - Query output displayed in the web application
 
@@ -407,7 +407,7 @@ n: Where n is the applicable container ID for the rows containing data |
 
 Similar to Oracle Database, however, it does not require to `**SELECT**`** **from any specific table and the comments are `##` instead of `--`. 
 
-![Untitled](68f02330_Untitled.png)
+![68f02330_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/7b97dd8c-14af-45a9-a7db-9fa645323b4d)
 
 **SQL Query Injection for MySQL and MSSQL**
 
@@ -420,7 +420,7 @@ Similar to Oracle Database, however, it does not require to `**SELECT**`** **fro
 
 <br/>
 
-![Untitled](86764dd1_Untitled.png)
+![86764dd1_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/930b41d6-7ddd-4f7b-be98-4b92c18f3234)
 
 - Output of query via the web application
 
@@ -456,7 +456,7 @@ SELECT * FROM information_schema.tables
 
 **Sample Query Output:**
 
-![Untitled](2de46bdf_Untitled.png)
+![2de46bdf_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/4514732c-8718-4170-9e1e-b06cc8bee2d4)
 
 Based on the output, there are a total of three tables which are **Products, Users and Feedback. **With this, it is possible to query specific information from the tables. For instance:
 
@@ -487,7 +487,7 @@ Upon determining the number of columns and the datatype of the columns, the firs
 
 **Listing all tables within **`information_schema.tables` using **Burp Suite:**  
 
-![Untitled](3af287aa_Untitled.png)
+![3af287aa_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/c88552e5-6f57-45ea-a98a-b545dfc22fa5)
 
 **Query Injected:**
 
@@ -506,7 +506,7 @@ The `users_dragfx` can then be used to craft a query which is able to list out a
 
 <br/>
 
-![Untitled](76e89471_Untitled.png)
+![76e89471_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/5e4214e6-7a45-467b-8508-179e5f034467)
 
 **Query Injected:**
 
@@ -526,7 +526,7 @@ By injecting the queries, there were two columns that seemed to be more relevant
 
 
 
-![Untitled](86bccc31_Untitled.png)
+![86bccc31_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/1d72a6dc-07b3-4342-aa4c-c8c231cf33bb)
 
 **Query Injected:**
 
@@ -547,7 +547,7 @@ By injecting the queries, there were two columns that seemed to be more relevant
 
 <br/>
 
-![Untitled](e69917df_Untitled.png)
+![e69917df_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/09448a3e-8474-4a30-b175-83d23a9d771b)
 
 - **Successfully logged in as Administrator**
 
@@ -567,7 +567,7 @@ First, we need to start by listing out the tables found in the database.
 
 <br/>
 
-![Untitled](90f8a783_Untitled.png)
+![90f8a783_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/6693822d-c972-4a77-869a-a0efc05f4686)
 
 **Query Injected:**
 
@@ -580,7 +580,7 @@ First, we need to start by listing out the tables found in the database.
 
 **Output:**
 
-![Untitled](3460c624_Untitled.png)
+![3460c624_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/7a2d9201-e161-4bd7-97a5-7a54fc5468d6)
 
 - In this case, the most relevant to use is the `USERS_LXUXKC` table which should contain the usernames and passwords of all users.
 
@@ -588,7 +588,7 @@ First, we need to start by listing out the tables found in the database.
 
 <br/>
 
-![Untitled](6b5d3ec9_Untitled.png)
+![6b5d3ec9_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/8b4ab603-d0ac-4825-9a4b-c95993a9fa06)
 
 **Query Injected:**
 
@@ -607,7 +607,7 @@ With the the columns obtained, a proper query can be crafted to obtain the user 
 
 <br/>
 
-![Untitled](10176165_Untitled.png)
+![10176165_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/36cf202d-a30a-4c5d-be1b-0a5cabc2ebd4)
 
 <br/>
 
@@ -632,9 +632,9 @@ With the the columns obtained, a proper query can be crafted to obtain the user 
 
 <br/>
 
-![Untitled](c932c1d6_Untitled.png)
+![c932c1d6_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/453c3e84-6b11-4c01-b97e-a4683fa964f1)
 
-![Untitled](39cc2bf5_Untitled.png)
+![39cc2bf5_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/b66442aa-5427-4cb7-a9f6-e769175f9c4b)
 
 - **Successfully logged in as Administrator**
 
@@ -689,7 +689,7 @@ TrackingId=xyz' AND '1'='2--
 
 <br/>
 
-![Untitled](14efc15f_Untitled.png)
+![14efc15f_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/3778c2bc-d784-4a39-b4fa-26fe784c4e41)
 
 - “Welcome back” message appears when 1=1 (which is true)
 
@@ -697,7 +697,7 @@ TrackingId=xyz' AND '1'='2--
 
 <br/>
 
-![Untitled](07600fc1_Untitled.png)
+![07600fc1_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/bad9a0fc-aa02-46f5-a1b7-b2b093c99ce2)
 
 - “Welcome back” message does not appear when 1=2 (which is false)
 
@@ -705,7 +705,7 @@ TrackingId=xyz' AND '1'='2--
 
 <br/>
 
-![Untitled](f80194c2_Untitled.png)
+![f80194c2_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/a83adb64-db3e-4f42-956b-23b54259affe)
 
 Another verification query needs to be sent to determine if the **users **table exists.
 
@@ -726,7 +726,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users LIMIT 1)='a'--
 
 <br/>
 
-![Untitled](7a6a42e4_Untitled.png)
+![7a6a42e4_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/853c91bb-023c-45b1-a9d9-1e4e405a30f0)
 
 With the **users** table found, an **administrator **user needs to be determined. In this case, it can be tested by issuing the query below:
 
@@ -756,7 +756,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](be226917_Untitled.png)
+![be226917_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/137c09dc-ed05-4525-a0b1-3ca860f319ec)
 
 - Setting intruder attack type and payload positions
 
@@ -764,7 +764,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 **Payload Settings:**
 
-![Untitled](8c467ec9_Untitled.png)
+![8c467ec9_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/d0d250b5-638a-471c-a216-1a1e35ee2024)
 
 - Payload setting in this case is using a range of numbers from 1 to 30 which increments by 1 each time
 
@@ -772,13 +772,13 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](5186778f_Untitled.png)
+![5186778f_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/ddd87925-ae93-4174-8649-4e6c9a0b2599)
 
 - Grep Match is used with the phrase “Welcome back!” to filter the responses
 
 <br/>
 
-![Untitled](d8c77375_Untitled.png)
+![d8c77375_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/e04327f9-76b7-42ef-b770-cbe760db4892)
 
 - From the brute force attempt, it shows that the password length is a total of 20 characters
 
@@ -790,7 +790,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](69e7f747_Untitled.png)
+![69e7f747_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/8a683159-3926-4a77-916a-f65ca3ce35c4)
 
 
 ```sql
@@ -805,13 +805,13 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](5d7d9a13_Untitled.png)
+![5d7d9a13_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/efa26d4f-3733-47ad-99a5-67c0a0ed4530)
 
 - The first payload sets uses a number range of 1 to 20 characters 
 
 <br/>
 
-![Untitled](204caeed_Untitled.png)
+![204caeed_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/acdc6364-2469-4d52-9f5b-f8bfb253ae19)
 
 - The second payload set includes Alphanumeric payload using lowercase letters only
 
@@ -819,7 +819,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](4c54aabd_Untitled.png)
+![4c54aabd_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/c66b89e2-8be4-4ad0-8280-3e4e1925e5f5)
 
 - **Grep Match **feature is used to specify for the “Welcome back!” phrase in the responses
 
@@ -827,7 +827,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](fba26424_Untitled.png)
+![fba26424_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/7c1399f7-a7dd-4417-b7cd-2e2d7131e67f)
 
 - The password brute force results are shown above
 
@@ -839,29 +839,11 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](a183f8f6_Untitled.png)
+![a183f8f6_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/81926aca-0d53-450a-bfd0-448e2e50d66b)
 
-![Untitled](5a38369e_Untitled.png)
+![5a38369e_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/a0b68684-bb01-44e2-b584-231e70f1c81c)
 
 - **Successfully logged in as Administrator**
-
-<br/>
-
-<br/>
-
-<br/>
-
-<br/>
-
-<br/>
-
-<br/>
-
-<br/>
-
-<br/>
-
-<br/>
 
 <br/>
 
@@ -875,7 +857,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](46c9ac2a_Untitled.png)
+![46c9ac2a_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/e5b5b43e-6e40-4066-b77a-6b761fcf7e09)
 
 - Adding a single quote to the tracking ID to test for syntax errors
 
@@ -885,7 +867,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](58226ac3_Untitled.png)
+![58226ac3_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/ab210944-77b1-46d7-963e-a75b91aeb3ba)
 
 - Adding quotes to the tracking ID to test for syntax errors
 
@@ -899,11 +881,11 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](b568d6df_Untitled.png)
+![b568d6df_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/0a8bd95b-4e2e-4346-9e2b-4d57a1f30e78)
 
 - Testing if the  server can interpret an SQL query
 
-- Server is unfortunately unable to interpret the SQL query
+- Server is, unfortunately, unable to interpret the SQL query
 
 - This could mean that it is an Oracle database which requires a specific table for data to be extracted from
 
@@ -918,7 +900,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](8ba2cd48_Untitled.png)
+![8ba2cd48_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/db51c222-d4f1-4220-aeb4-7dfef7ea48cc)
 
 - Server can be confirmed to be using **Oracle Database**
 
@@ -933,7 +915,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](c54b1050_Untitled.png)
+![c54b1050_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/b5530944-e8cd-4ac6-b6be-44276d6d0a62)
 
 **Query Injected:**
 
@@ -950,7 +932,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](0bec4d7e_Untitled.png)
+![0bec4d7e_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/97aeb6ea-eaa7-490b-8707-986056cfdc2c)
 
 **Query:**
 
@@ -963,7 +945,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 - **ROWNUM = 1** ensures that there is only one row number
 
-![Untitled](5181bb70_Untitled.png)
+![5181bb70_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/ae09521b-c68f-4353-a40a-8fd1a55984a8)
 
 <br/>
 
@@ -982,7 +964,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](09f8995f_Untitled.png)
+![09f8995f_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/3dcb9794-2c01-4bd1-987a-a959a63602db)
 
 **Query Injected:**
 
@@ -1001,7 +983,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](1794c857_Untitled.png)
+![1794c857_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/a8699a42-f594-42f4-8476-d27c0bf2d299)
 
 **Query:**
 
@@ -1020,7 +1002,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](26ca6ca0_Untitled.png)
+![26ca6ca0_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/192dada5-c6a2-428a-bd12-5df602061b5e)
 
 **Query:**
 
@@ -1037,7 +1019,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](1ccc9e91_Untitled.png)
+![1ccc9e91_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/cf316c22-7dfa-4fab-8e73-504dc42a6269)
 
 **Query Injected:**
 
@@ -1054,7 +1036,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](432fb3c4_Untitled.png)
+![432fb3c4_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/abfb0158-1dfd-4dd2-ade3-3ceb4e188983)
 
 **Query Injected:**
 
@@ -1075,19 +1057,19 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](9af412dc_Untitled.png)
+![9af412dc_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/4c13a606-08df-4324-ad26-1c64a79ef733)
 
 - Sniper attack type is used as only the password length needs to be brute forced first
 
 <br/>
 
-![Untitled](c78ac19a_Untitled.png)
+![c78ac19a_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/bd18bf8b-b032-48dd-bfb4-a47c0a933b08)
 
 - The payload set uses a number range of 1 to 30 characters to determine the password length
 
 <br/>
 
-![Untitled](fca344f8_Untitled.png)
+![fca344f8_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/93c30b09-51c9-43c1-9338-ba59937db949)
 
 - Results shows that the password is not more than 20 characters long as it does not return an error after the 20th entry
 
@@ -1097,7 +1079,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](00d5157e_Untitled.png)
+![00d5157e_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/58a00f3c-1bb8-4d60-8784-a588c9104c13)
 
 - **Cluster bomb **attack type is used because there are two parts to brute force consisting of the password position and the character in that position
 
@@ -1112,13 +1094,13 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](3eac0098_Untitled.png)
+![3eac0098_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/f5ad186a-21cf-4e77-a690-cbcf7f7acdf2)
 
 - Payload set 1 uses a range of numbers from 1 to 20
 
 <br/>
 
-![Untitled](b042d525_Untitled.png)
+![b042d525_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/7189cc71-ef11-45e8-aa8b-725addce1744)
 
 - Payload set 2 uses lowercase alphanumeric characters for the characters to be brute forced
 
@@ -1126,7 +1108,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](b1e346f9_Untitled.png)
+![b1e346f9_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/df43c69e-fa20-4514-8eb8-ec37ad658621)
 
 - **Grep-Match **is used in this case to specify for responses containing the phrase** “Internal Server Error”** as it will be an indicator when the character matches the actual password
 
@@ -1134,7 +1116,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](cfadb2cc_Untitled.png)
+![cfadb2cc_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/b5117096-6539-415f-a332-05f127036c32)
 
 - Password for the administrator account was successfully brute forced
 
@@ -1144,9 +1126,9 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](4f5537a0_Untitled.png)
+![4f5537a0_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/6b62eb7b-9729-4de2-921a-8f5e6d0f5fc0)
 
-![Untitled](5a10dd10_Untitled.png)
+![5a10dd10_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/7ed163bf-c7ef-473a-8a64-0ba5c64666b6)
 
 - **Successfully Logged in as Administrator**
 
@@ -1160,11 +1142,12 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 **Time Delay Cheatsheet:**
 
-![Untitled](dfe8fe01_Untitled.png)
+![dfe8fe01_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/17948b73-c2cf-452e-93e5-63394c127c31)
 
 <br/>
 
-![Untitled](c612e8ef_Untitled.png)
+![c612e8ef_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/7a2ada51-bd18-4d26-8b59-34d59c59375d)
+
 
 **Query Injected:**
 
@@ -1177,7 +1160,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](402e487e_Untitled.png)
+![402e487e_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/49f2b012-4344-4557-a3b4-d8064d2c7848)
 
 - Indicates that it is a **Postgres **database hence why the time delay worked
 
@@ -1193,7 +1176,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](dee64ae3_Untitled.png)
+![dee64ae3_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/a2d1ea49-3825-45bc-8336-4b735d3430f6)
 
 **Query Injected:**
 
@@ -1210,9 +1193,9 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](a3b1e738_Untitled.png)
+![a3b1e738_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/532f34e3-e21b-47d2-9d6a-ec63c61c4b27)
 
-![Untitled](6afd2f34_Untitled.png)
+![6afd2f34_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/6ce9bc81-679b-46de-a9af-5b8a9a79ac87)
 
 **Query:**
 
@@ -1229,7 +1212,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](de850683_Untitled.png)
+![de850683_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/99ff3447-46be-42db-aeca-b12a9e5e93c8)
 
 
 ```sql
@@ -1244,9 +1227,9 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](2b4f432d_Untitled.png)
+![2b4f432d_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/f4fb69bf-ccfc-4ed8-b29e-a8f767a1ef8e)
 
-![Untitled](b2fc61f6_Untitled.png)
+![b2fc61f6_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/64e7d7df-62ca-4e8d-b056-41cf6c6f37d0)
 
 
 ```sql
@@ -1263,7 +1246,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](e0c9dac6_Untitled.png)
+![e0c9dac6_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/38e0686a-ff68-4da8-bf0f-13453793508e)
 
 **Query Injected:**
 
@@ -1272,7 +1255,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 '; SELECT CASE WHEN (username='administrator' AND LENGTH(password)>1) THEN pg_sleep(5) ELSE pg_sleep(0) END FROM users--
 ```
 
-- Attack type is set as sniper as there is only one payload
+- Attack type is set as Sniper as there is only one payload
 
 - Payload position will be set for the password length which needs to be incremented
 
@@ -1280,13 +1263,13 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](5006d564_Untitled.png)
+![5006d564_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/f0538cce-ea52-4cab-9d8c-04c7c573fef1)
 
 - Payload used consists of numbers between the range of 1 and 30 with an increment of 1 per request
 
 <br/>
 
-![Untitled](a244af51_Untitled.png)
+![a244af51_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/c494d496-0e82-474d-80c4-fc9cac0f0f49)
 
 - Resource Pool of 1 for results to be accurate due to the time delay factor which is checked per request
 
@@ -1294,7 +1277,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](cc9305e0_Untitled.png)
+![cc9305e0_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/a2a97f78-b25a-4111-bfdb-68108e382df4)
 
 - Brute forcing the length of the administrator password
 
@@ -1302,7 +1285,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](3020f73c_Untitled.png)
+![3020f73c_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/897f2c21-7c06-4254-b266-b74a53280735)
 
 **Query:**
 
@@ -1313,13 +1296,13 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 - Brute forcing the password length shows that it is 20 characters in length
 
-- With that information, a brute force can be done to determine the full password of the administrator account
+- With that information, a brute force attack can be done to determine the full password of the administrator account
 
 <br/>
 
 <br/>
 
-![Untitled](32092687_Untitled.png)
+![32092687_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/152f7ef5-44a8-4b65-89dd-28abf2f7c205)
 
 **Query Injected for Brute Force:**
 
@@ -1336,23 +1319,23 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](fcaf362f_Untitled.png)
+![fcaf362f_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/21c893bf-6568-4165-ad60-4b7366ac5ef3)
 
-- Payload set is alphanumeric character set consisting only of lowercase letters and numbers
-
-<br/>
-
-<br/>
-
-![Untitled](c2045bb4_Untitled.png)
-
-- Selecting resource pool of 1 to accurately view the time delay in the responses during the password brute force
+- Payload set is an alphanumeric character set consisting only of lowercase letters and numbers
 
 <br/>
 
 <br/>
 
-![Untitled](109e922a_Untitled.png)
+![c2045bb4_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/97393a34-4e2f-4c1f-9aae-1ecba9c4a512)
+
+- Selecting a resource pool of 1 to accurately view the time delay in the responses during the password brute force
+
+<br/>
+
+<br/>
+
+![109e922a_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/8fc81490-f9f2-4ee3-b4f3-ca0eff6cbc9c)
 
 - Increment the character position of the password to brute force and repeat until getting the full password
 
@@ -1362,9 +1345,9 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](7400aeba_Untitled.png)
+![7400aeba_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/ff6cdd23-1b75-4b82-afec-7c1ed7505479)
 
-![Untitled](692a00d9_Untitled.png)
+![692a00d9_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/8876495b-6e9b-4869-a9b1-f830ce222140)
 
 - **Successfully Logged in as Administrator**
 
@@ -1376,9 +1359,9 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](277b68a4_Untitled.png)
+![277b68a4_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/4c8d5cb6-bef4-4474-a855-c1febcf29bb7)
 
-![Untitled](35f435c0_Untitled.png)
+![35f435c0_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/0cf71276-7677-4483-8983-87def826ad18)
 
 - Hackvertor extension is needed to obfuscate the payload using XML Entities
 
@@ -1388,7 +1371,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](b38c8fa9_Untitled.png)
+![b38c8fa9_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/7caafeb8-4969-44ba-99fe-7a20fe389550)
 
 - Vulnerable stock check feature on the web application
 
@@ -1396,7 +1379,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](cdb5ea9e_Untitled.png)
+![cdb5ea9e_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/a6ac6c29-f287-4908-b124-57dba66b851e)
 
 - Intercepted the stock check POST request
 
@@ -1404,7 +1387,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](930264a1_Untitled.png)
+![930264a1_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/69ab220a-7536-44ae-9169-0eebf36df07c)
 
 - Performing basic addition operation for testing
 
@@ -1412,7 +1395,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 <br/>
 
-![Untitled](427b8e79_Untitled.png)
+![427b8e79_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/3eb71650-282e-4097-999b-028593ab1186)
 
 **Query Injected:**
 
@@ -1431,7 +1414,7 @@ UNION SELECT NULL
 
 <br/>
 
-![Untitled](0b59028f_Untitled.png)
+![0b59028f_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/b912bc27-bbda-45a7-b862-a558e9614ac7)
 
 - Using dec_entities to obfuscate the payload
 
@@ -1441,7 +1424,7 @@ UNION SELECT NULL
 
 <br/>
 
-![Untitled](9694a1c3_Untitled.png)
+![9694a1c3_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/0dc7611b-7eac-413a-ad35-3ecfdf74afbf)
 
 - “null” being appearing in the response indicates that the query was successful
 
@@ -1449,7 +1432,7 @@ UNION SELECT NULL
 
 <br/>
 
-![Untitled](1cf40ce1_Untitled.png)
+![1cf40ce1_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/568f816d-7084-4410-887c-b85de4e7940f)
 
 **Query Injected:**
 
@@ -1466,7 +1449,7 @@ UNION SELECT table_name FROM information_schema.tables
 
 <br/>
 
-![Untitled](95acc34a_Untitled.png)
+![95acc34a_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/a6aa3021-a092-4bd8-9735-1831444b2858)
 
 **Query Injected:**
 
@@ -1485,7 +1468,7 @@ UNION SELECT column_name FROM information_schema.columns where table_name='users
 
 	<br/>
 
-![Untitled](a7edd1f2_Untitled.png)
+![a7edd1f2_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/ecd10136-4062-4df2-999a-eeeffe72cb11)
 
 **Query Injected:**
 
@@ -1508,21 +1491,9 @@ UNION SELECT username || '::' || password FROM users
 
 <br/>
 
-![Untitled](8d29fa3b_Untitled.png)
+![8d29fa3b_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/ed12bce9-2716-47d5-bc66-c5230b53b55e)
 
-![Untitled](ec17bdb5_Untitled.png)
+![ec17bdb5_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/2b2d1fb0-7780-4ec2-ad8c-030a2d81fabe)
 
 - **Successfully logged in as Administrator**
-
-<br/>
-
-### Bind SQL injection with out-of-band interaction
-
-- Unable to be done due to the requirement of **Burp Suite Professional **for **Burp Collaborator**
-
-<br/>
-
-### Blind SQL Injection with out-of-band data exfiltration
-
-- Unable to be done due to the requirement of **Burp Site Professional **for **Burp Collaborator**
 
