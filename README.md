@@ -203,7 +203,7 @@ As a result, the query returns the username **administrator** and logs the attac
 
 ## Union Attacks
 
-Union attacks allow the attacker to retrieve data from other tables within the database using the **UNION** keyword which allows the attacker to run another **SELECT **query by appending it to the end of the original query.
+Union attacks allow the attacker to retrieve data from other tables within the database using the **UNION** keyword which allows the attacker to run another **SELECT** query by appending it to the end of the original query.
 
 <br/>
 
@@ -328,7 +328,7 @@ Basically, the query will now display all products from the **Accessories** cate
 
 <br/>
 
-As a result, the data can be extracted from other tables such as the `**username**`** **and `**password**`** **columns from the `**users**` table in this case.
+As a result, the data can be extracted from other tables such as the `username`and `password` columns from the `users` table in this case.
 
 <br/>
 
@@ -413,7 +413,7 @@ As a result, the data can be extracted from other tables such as the `**username
 
 **More information about v$version in Oracle:**
 
-`**v$version**` displays the version number of Oracle Database. The database components have the same version number as the database, so the version number is returned only once.
+`v$version` displays the version number of Oracle Database. The database components have the same version number as the database, so the version number is returned only once.
 
  | Column | Datatype | Description | 
  | ---- | ---- | ---- | 
@@ -431,7 +431,7 @@ n: Where n is the applicable container ID for the rows containing data |
 
 <br/>
 
-Similar to Oracle Database, however, it does not require to `**SELECT**`** **from any specific table and the comments are `##` instead of `--`. 
+Similar to Oracle Database, however, it does not require to `SELECT` from any specific table and the comments are `##` instead of `--`. 
 
 ![68f02330_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/7b97dd8c-14af-45a9-a7db-9fa645323b4d)
 
@@ -484,7 +484,7 @@ SELECT * FROM information_schema.tables
 
 ![2de46bdf_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/4514732c-8718-4170-9e1e-b06cc8bee2d4)
 
-Based on the output, there are a total of three tables which are **Products, Users and Feedback. **With this, it is possible to query specific information from the tables. For instance:
+Based on the output, there are a total of three tables which are Products, Users and Feedback. With this, it is possible to query specific information from the tables. For instance:
 
 <br/>
 
@@ -503,7 +503,7 @@ SELECT * FROM information_schema.tables WHERE table_name= 'Users'
 
 ### Lab: Listing Information from Database (Not Oracle):
 
-***Note: ****The number of columns and the datatype of the columns must be determined first*
+**Note:** The number of columns and the datatype of the columns must be determined first
 
 <br/>
 
@@ -511,7 +511,7 @@ Upon determining the number of columns and the datatype of the columns, the firs
 
 <br/>
 
-**Listing all tables within **`information_schema.tables` using **Burp Suite:**  
+**Listing all tables within** `information_schema.tables` using **Burp Suite:**  
 
 ![3af287aa_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/c88552e5-6f57-45ea-a98a-b545dfc22fa5)
 
@@ -585,7 +585,7 @@ By injecting the queries, there were two columns that seemed to be more relevant
 
 <br/>
 
-***Note: ****The number of columns and the datatype of the columns must be determined first*
+**Note:** The number of columns and the datatype of the columns must be determined first
 
 <br/>
 
@@ -754,7 +754,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users LIMIT 1)='a'--
 
 ![7a6a42e4_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/853c91bb-023c-45b1-a9d9-1e4e405a30f0)
 
-With the **users** table found, an **administrator **user needs to be determined. In this case, it can be tested by issuing the query below:
+With the **users** table found, an **administrator** user needs to be determined. In this case, it can be tested by issuing the query below:
 
 
 ```sql
@@ -847,7 +847,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 ![4c54aabd_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/c66b89e2-8be4-4ad0-8280-3e4e1925e5f5)
 
-- **Grep Match **feature is used to specify for the “Welcome back!” phrase in the responses
+- **Grep Match** feature is used to specify for the “Welcome back!” phrase in the responses
 
 <br/>
 
@@ -1056,7 +1056,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 - Confirming the existence of the “administrator” username
 
-- Query confirms of the existence of the** “administrator” **username within the **users **table
+- Query confirms of the existence of the **administrator** username within the **users** table
 
 <br/>
 
@@ -1107,7 +1107,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 ![00d5157e_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/58a00f3c-1bb8-4d60-8784-a588c9104c13)
 
-- **Cluster bomb **attack type is used because there are two parts to brute force consisting of the password position and the character in that position
+- **Cluster bomb** attack type is used because there are two parts to brute force consisting of the password position and the character in that position
 
 - **Query:**
 
@@ -1136,7 +1136,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 ![b1e346f9_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/df43c69e-fa20-4514-8eb8-ec37ad658621)
 
-- **Grep-Match **is used in this case to specify for responses containing the phrase** “Internal Server Error”** as it will be an indicator when the character matches the actual password
+- **Grep-Match** is used in this case to specify for responses containing the phrase “Internal Server Error”** as it will be an indicator when the character matches the actual password
 
 <br/>
 
@@ -1146,7 +1146,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 - Password for the administrator account was successfully brute forced
 
-- **Full password is q8nwjwj6m10to9c2hp87 **
+- Full password is **q8nwjwj6m10to9c2hp87**
 
 <br/>
 
@@ -1188,7 +1188,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 ![402e487e_Untitled](https://github.com/Fedwig/picoCTF2023-Writeup/assets/85858497/49f2b012-4344-4557-a3b4-d8064d2c7848)
 
-- Indicates that it is a **Postgres **database hence why the time delay worked
+- Indicates that it is a **Postgres** database hence why the time delay worked
 
 <br/>
 
@@ -1213,7 +1213,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 - To determine the type of database according to the time delay
 
-- Has 10 second delay indicating that it is a **Postgresco **database
+- Has 10 second delay indicating that it is a **Postgresco** database
 
 <br/>
 
@@ -1232,7 +1232,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 -  Query is used to test for conditions
 
-- Condition whereby** “1=1”** causes time delay for the response to be received
+- Condition whereby **1=1** causes time delay for the response to be received
 
 <br/>
 
@@ -1247,7 +1247,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 - To confirming reliability of conditional query
 
-- The query does not result in time delay when** “1=2” **which ensures that it works.
+- The query does not result in time delay when **1=2** which ensures that it works.
 
 <br/>
 
@@ -1264,9 +1264,9 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 - This confirms if the “administrator” username exists within the users table
 
-- There was a time delay which indicates that the “**administrator” **username exists within the **users **table
+- There was a time delay which indicates that the **administrator** username exists within the **users** table
 
-- Next is to use the **Intruder **to perform a brute force to determine the password length
+- Next is to use the **Intruder** to perform a brute force to determine the password length
 
 <br/>
 
@@ -1381,7 +1381,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 ### Lab: SQL injection with filter bypass via XML encoding
 
-**Vulnerability: **SQL Injection vulnerability in stock check feature
+**Vulnerability:** SQL Injection vulnerability in stock check feature
 
 <br/>
 
